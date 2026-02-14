@@ -147,13 +147,14 @@ def main() -> None:
         # ----------------------------------------------------
         run_sql_query(con, SQL_DIR / "tamara_shelter_query_shelter_count.sql")
         run_sql_query(con, SQL_DIR / "tamara_shelter_query_adoption_count.sql")
-        run_sql_query(con, SQL_DIR / "case_retail_query_adoption_aggregate.sql")
-        run_sql_query(con, SQL_DIR / "case_retail_query_adoption_by_category.sql")
+        run_sql_query(con, SQL_DIR / "tamara_shelter_query_adoption_aggregate.sql")
+        run_sql_query(con, SQL_DIR / "tamara_shelter_query_adoption_by_animal_type.sql")
 
         # ----------------------------------------------------
         # STEP 4: RUN KPI QUERY (ACTION-DRIVEN)
         # ----------------------------------------------------
         run_sql_query(con, SQL_DIR / "tamara_shelter_query_kpi_adoption.sql")
+        run_sql_query(con, SQL_DIR / "tamara_shelter_query_kpi_lowest_fee.sql")
 
     finally:
         # Regardless of success or failure, always close the connection
